@@ -211,6 +211,10 @@ form > input {
     color: #fff;
 }
 
+input:focus {
+    outline: none;
+}
+
 form > input:hover {
     border-bottom: solid 1px #fff;
 }
@@ -227,6 +231,7 @@ form > button {
     background: none;
     color: #fff;
     padding: 8px;
+    width: 80%;
 }
 
 .rotated {
@@ -236,7 +241,7 @@ form > button {
 .opened {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: auto !important;
 }
 
 .moreText {
@@ -319,7 +324,6 @@ form > button {
     }
 
     form > button {
-            width: 80%;
         padding: 10px;
     }
 }
