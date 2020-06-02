@@ -1,8 +1,7 @@
 const images = document.querySelectorAll('img[src="./assets/img/arrow-bottom.svg"]');
 
-const openText = e => {
-  const img = e.target;
-  const article = img.parentNode.parentNode;
+const openText = (article) => {
+  const img = article.querySelector('img');
   const DIV = document.createElement('div');
   if (img.classList.contains('rotated')) {
     article.classList.remove('opened')
@@ -18,5 +17,6 @@ const openText = e => {
 }
 
 for (let i = 0; i < images.length; i++) {
-  images[i].addEventListener('click', openText);
+  const article = images[i].parentNode.parentNode;
+  article.addEventListener('click', () => openText(article));
 }
