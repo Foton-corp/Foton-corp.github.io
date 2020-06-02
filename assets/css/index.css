@@ -319,6 +319,7 @@ form > button {
     }
 
     form > button {
+            width: 80%;
         padding: 10px;
     }
 }
